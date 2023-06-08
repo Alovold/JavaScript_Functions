@@ -52,17 +52,22 @@ function cartesianCheck(x, y) {
 console.log("EXERCISE 4:\n==========\n");
 
 function triangleType(a, b, c) {
-    if (a**2 + b**2 === c**2) {
-        console.log("The triangle is Right");
+    if (a + b <= c || b + c <= a || c + a <= b){
+        console.log("Not a valid triangle");
     }
-    else if (a == b && b == c && c == a) {
-        console.log("The triangle is equilateral");
-    }
-    else if (a == b || b == c || c == a) {
-        console.log("The triangle is Isosceles");
-    }
-    else if (a != b && b != c && c != a) {
-        console.log("The triangle is Scalene");
+    else{
+        if (a**2 + b**2 === c**2) {
+            console.log("The triangle is Right");
+        }
+        else if (a == b && b == c && c == a) {
+            console.log("The triangle is equilateral");
+        }
+        else if (a == b || b == c || c == a) {
+            console.log("The triangle is Isosceles");
+        }
+        else if (a != b && b != c && c != a) {
+            console.log("The triangle is Scalene");
+        }
     }
 }
 
